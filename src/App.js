@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import PhotoContextProvider from "./context/PhotoContext";
+<<<<<<< HEAD
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+=======
+// Import BrowserRouter instead of HashRouter to create friendly URLs
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+>>>>>>> a085660... realxdata coding challenge 2020
 import Header from "./components/Header";
 import Item from "./components/Item";
 import Search from "./components/Search";
@@ -18,7 +23,8 @@ class App extends Component {
   render() {
     return (
       <PhotoContextProvider>
-        <HashRouter basename="/SnapScout">
+      // Use Router instead of HashRouter and remove the basename so the URL starts at root
+        <Router>
           <div className="container">
             <Route
               render={props => (
