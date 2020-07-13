@@ -1,7 +1,7 @@
 // New Component for managing a google map
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-
+import { googleApiKey } from "../api/config";
 
 const containerStyle = {
   position: 'relative',
@@ -77,5 +77,5 @@ const MapContainer = (props) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: '',
+  apiKey: googleApiKey,
 })(MapContainer);

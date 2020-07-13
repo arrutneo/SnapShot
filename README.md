@@ -6,7 +6,7 @@
 
 [Demo of Snap Shot](https://yog9.github.io/SnapShot/)
 
-![](/snapscout.png)
+![](/snapscout_realxdata.png)
 
 ### Summary
 
@@ -18,9 +18,9 @@ The purpose of this project was to get familiar with React Hooks and Context API
 
 ### Getting Started
 
-Click the demo link or clone/download the repository on your local machine.
-Create a config.js file in api folder inside src folders. In config.js file write
-`export const apiKey = "YOUR_FLIKR_API_KEY";`
+Clone/download the repository on your local machine.
+Edit the config.js file in api folder inside src folders. In config.js file write your google maps API key
+`export const googleApiKey = "YOUR_GOOGLE_API_KEY";`
 
 ##### Install dependencies
 
