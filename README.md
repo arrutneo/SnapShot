@@ -53,3 +53,6 @@ Edit the config.js file in api folder inside src folders. In config.js file writ
 Everyone is welcomed to contribute to this project. You can contribute either by submitting bugs or suggesting improvements by opening an issue on GitHub. Please see the [CONTRIBUTING](CONTRIBUTING.md) guidelines for more information.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### How would you ensure the quality of this code?
+- I'd add Jest and Cypress test environments, include the Airbnb eslint codestyle and separate in modular components complex ones like Form.js for example. In this way the code could be reusable and easier to mantain/debug. 
