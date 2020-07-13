@@ -23,23 +23,16 @@ const adjustMap = (props, map) => {
 };
 
 const MapContainer = (props) => {
-  const { google, onMouseOver } = props;
-  const results = props.data;
+  const { google, onMouseOver, data } = props;
   let markers;
 
-  const onMouseOverHandler = (props, marker, event) => {
-    const { map, id, position } = props;
-
-    position.lat = parseInt(position.lat);
-    position.lng = parseInt(position.lng);
-
-    map.panTo(position);
-
+  const onMouseOverHandler = (props) => {
+    const id = props.id;
     onMouseOver(id);
   }
 
-  if (results.length > 0 ) {
-    markers = results.map(image => {
+  if (data.length > 0 ) {
+    markers = data.map(image => {
       let id = image.id;
       let title = image.title;
       let latitude = image.latitude;
@@ -57,7 +50,7 @@ const MapContainer = (props) => {
           }}
           onMouseover={onMouseOverHandler}
           icon={{
-                url: `http://maps.google.com/mapfiles/ms/icons/${active ? 'purple' : 'yellow'}-dot.png`,
+                url: `http://maps.google.com/mapfiles/ms/icons/${active ? 'yellow' : 'purple'}-dot.png`,
               }}
         />
       );

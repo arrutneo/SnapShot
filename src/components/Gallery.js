@@ -5,9 +5,10 @@ const Gallery = props => {
   const {data, onMouseOver} = props;
   let images;
   let noImages;
+
   // map variables to each item in fetched image array and return image component
-  if (results.length > 0) {
-    images = results.map(image => {
+  if (data.length > 0) {
+    images = data.map(image => {
       let farm = image.farm;
       let server = image.server;
       let id = image.id;

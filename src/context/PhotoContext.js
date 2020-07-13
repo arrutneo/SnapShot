@@ -32,7 +32,7 @@ const PhotoContextProvider = props => {
     }
   };
   return (
-    <PhotoContext.Provider value={{ images, loading, runSearch }}>
+    <PhotoContext.Provider value={{ images, setImages, loading, runSearch }}>
       {props.children}
     </PhotoContext.Provider>
   );

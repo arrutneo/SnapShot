@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from "react";
+import { cloneDeep, isEqual } from "lodash";
 import { PhotoContext } from "../context/PhotoContext";
 import Gallery from "./Gallery";
+import MapContainer from "./MapContainer";
 import Loader from "./Loader";
 
 const Container = ({ searchTerm }) => {
@@ -13,15 +15,10 @@ const Container = ({ searchTerm }) => {
 
   // Update images state according to mouse over and update images state only if it has changed
   const onMouseOverHandler = (id) => {
-
     const indexId = images[searchTerm].findIndex(image => parseInt(image.id) === parseInt(id));
-
     const imagesCopy = cloneDeep(images);
-
     imagesCopy[searchTerm].forEach((item, index) => indexId === index ? item.active = true : item.active = false);
-
     !isEqual(images, imagesCopy) && setImages({...images, [searchTerm]: imagesCopy[searchTerm]});
-
   };
 
   useEffect(() => {
@@ -31,7 +28,7 @@ const Container = ({ searchTerm }) => {
 
   return (
     <div className="photo-container">
-      // Add Map component and onMouseOver handler to both components so their children can manage the event
+      {/*Add Map component and onMouseOver handler to both components so their children can manage the event*/}
       {loading ? <Loader /> : <><MapContainer onMouseOver={onMouseOverHandler} data={imagesArray} /><Gallery onMouseOver={onMouseOverHandler} data={imagesArray} /></>}
     </div>
   );

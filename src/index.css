@@ -121,6 +121,10 @@ input {
   background-color: #051c33;
 }
 
+.map-container {
+  height: 600px
+}
+
 .photo-container ul {
   display: flex;
   flex-flow: row wrap;
@@ -134,6 +138,12 @@ input {
   height: 165px;
   overflow: hidden;
   margin-bottom: 15px;
+}
+
+.photo-container ul .active {
+  box-sizing: border-box;
+  border: 5px solid yellow;
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,.5);
 }
 
 .photo-container ul img {

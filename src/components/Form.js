@@ -9,7 +9,7 @@ const Form = ({ handleSubmit, history }) => {
   return (
     <form
       className="search-form"
-      // Share the updating search method
+      //Share the updating search method
       onSubmit={e => handleSubmit(e, history, searchEntry, setSearchEntry)}
     >
       <input
